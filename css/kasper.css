@@ -326,3 +326,66 @@ header nav .form i {
   color: #777;
 }
 /* End Services */
+
+/* Start Gallery */
+/* .gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+.gallery .img-container {
+  /* padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-basis: 25%; */
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 40px;
+}
+
+.gallery .img-container .img-box {
+  overflow: hidden;
+  position: relative;
+}
+.gallery .img-container .img-box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+
+.gallery .img-container .img-box .caption {
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  transition: 0.3s;
+  bottom: -100%;
+}
+.gallery .img-container .img-box:hover .caption {
+  bottom: 0;
+}
+
+.gallery .img-container .img-box:hover img {
+  transform: rotate(3deg) scale(1.1);
+  -webkit-transform: rotate(3deg) scale(1.1);
+  -moz-transform: rotate(3deg) scale(1.1);
+  -ms-transform: rotate(3deg) scale(1.1);
+  -o-transform: rotate(3deg) scale(1.1);
+}
+
+.gallery .img-container .img-box .caption h2 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.gallery .img-container .img-box .caption p {
+  color: var(--main-color);
+  font-weight: bold;
+}
+
+/* End Gallery */
